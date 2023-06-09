@@ -1,0 +1,77 @@
+body {
+    font-family: arial;
+    background-image: url('fondo-login.jpg');
+    background-size:cover;
+    background-position:auto;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    display: flex;
+    height: 40px;
+    margin: auto;
+}
+
+.logo-img{ 
+    height: 125px;
+    margin: auto;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 350px;
+    height: 320px; */
+    margin: auto;
+    margin-top: 120px;
+    /* box-shadow: 7px 13px 37px #000; */
+    padding: 20px 30px;
+    color: white;
+}
+
+.menu {
+    background-color: white;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #333;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.menu li {
+    padding: 10px;
+    position: relative;
+}
+
+.menu li a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+
+.contenido {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.menu li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}

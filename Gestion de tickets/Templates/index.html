@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+  <meta charset="UTF-8">
+  <title>Tickets</title>
+  <link rel="stylesheet" type="text/css" href="C:\Users\gener\OneDrive\Escritorio\Gestion de tickets\CSS\styles.css">
+</head>
+
+<body>
+  <h1>Sistema de Gestion de Tickets</h1>
+
+  <form id="ticketForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Correo electronico:</label>
+    <input type="email" id="email" required>
+
+    <label for="subject">Asunto:</label>
+    <input type="text" id="subject" required>
+
+    <label for="message">Mensaje:</label>
+    <textarea id="message" required></textarea>
+
+    <button type="submit">Enviar ticket</button>
+  </form>
+
+  <div id="ticketList">
+    <h2>Tickets Anteriores</h2>
+    <!-- Aquí se mostrarán los tickets -->
+  </div>
+    <!--Utilizamos un script para almacenar los tickets y devolverlos-->
+  <script src="script.js"></script>
+  <!--Con las mismas funciones habilitaremos modificaciones, creaciones y cierres de los mismos-->
+</body>
+</html>
