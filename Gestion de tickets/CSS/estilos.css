@@ -17,30 +17,31 @@
   transition: all 0.5s ease;
 }
 .sidebar.close{
-  width: 78px;
+  width: 82px;
 }
-.sidebar .logo-details{
-  height: 60px;
-  width: 100%;
+.sidebar .logo{
+  height: 80px;
+  padding: 3px;
+  width: auto;
   display: flex;
   align-items: center;
 }
-.sidebar .logo-details i{
+.sidebar .logo i{
   font-size: 30px;
   color: #ffffff;
   height: 50px;
-  min-width: 78px;
+  min-width: 75px;
   text-align: center;
   line-height: 50px;
 }
-.sidebar .logo-details .logo_name{
+.sidebar .logo{
   font-size: 22px;
   color: #ffffff;
   font-weight: 600;
   transition: 0.3s ease;
   transition-delay: 0.1s;
 }
-.sidebar.close .logo-details .logo_name{
+.sidebar.close .logo-menu{
   transition-delay: 0s;
   opacity: 0;
   pointer-events: none;
