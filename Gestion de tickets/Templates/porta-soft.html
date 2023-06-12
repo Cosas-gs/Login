@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% block content %}
+<h1>Sistema de Gestion de Tickets</h1>
+
+<form id="ticketForm">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" required>
+
+  <label for="email">Correo electronico:</label>
+  <input type="email" id="email" required>
+
+  <label for="subject">Asunto:</label>
+  <input type="text" id="subject" required>
+
+  <label for="message">Mensaje:</label>
+  <textarea id="message" required></textarea>
+
+  <button type="submit">Enviar ticket</button>
+</form>
+{% endblock %}

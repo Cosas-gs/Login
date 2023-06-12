@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Global Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='estilos.css') }}">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+
+<body>
+  <div class="content-container">
+    {% block content %} 
+    {% endblock %}
+  </div>
+  <div class="sidebar close">
+    <div class="logo">
+      <img src="{{ url_for('static',filename='logo-recortado.png') }}" alt="GlobalSolutions" class="logo">
+      <span class="logo-menu">GlobalSolutions</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">TICKETS</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">TICKETS</a></li>
+          <li><a href="/soli-soft-portabilidad">Portabilidad</a></li>
+          <li><a href="/soli-soft-ftth">FTTH</a></li>
+          <li><a href="/soli-soft-atp">ATP</a></li>
+          <li><a href="/soli-soft-emergencias">Emergencias</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">GTR</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">GTR</a></li>
+          <li><a href="/soli-hard-portabilidad">Portabilidad</a></li>
+          <li><a href="/soli-hard-ftth">FTTH</a></li>
+          <li><a href="/soli-hard-atp">ATP</a></li>
+          <li><a href="/soli-hard-emergencias">Emergencias</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Inventario</span>
+        </a>
+        <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventario</a></li>
+        </ul>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart' ></i>
+          <span class="link_name">Contactos</span>
+        </a>
+        <ul class="sub-menu">
+            <li><a class="link_name" href="#">Contactos</a></li>
+          </ul>
+        </ul>
+      </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Menu</span>
+    </div>
+  </section>
+  <section>
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>
