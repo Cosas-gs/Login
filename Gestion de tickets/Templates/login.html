@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Inicio de sesion</title>
-    <link rel="icon" href="/Gestion de tickets/Images/user.png">
-    <link rel="stylesheet" href="/Gestion de tickets/CSS/login.css">
+    <link rel="icon" href="{{ url_for('static',filename='user.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='login.css') }}", type="text/css">
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="/Gestion de tickets/Images/gs-logo.png" alt="GlobalSolutions" class="logo-img">
+        <img src="{{ url_for('static',filename='gs-logo.png') }}" alt="GlobalSolutions" class="logo-img">
       </div>
     </header>
     <main>
@@ -17,8 +17,37 @@
       <h5>Ingrese</h5>
       <input class="controls" type="text" name="usuario" value="" placeholder="Usuario" required>
       <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" required>
-      <a href="bienvenida.html"><input class="buttons" type="submit" name="" value="Ingresar"></a>
+      <a href="/home"><input class="buttons" type="submit" name="" value="Ingresar"></a>
       <p></p>
     </section>
   </body>
 </html>
+
+<!-- 
+  MULTI PRODUCTOS
+  ID:NONE {back}
+  USER:NONE {front}
+  AREA:NONE {front}
+  TITLE:GENERATE {user}
+  DESCRIPCION:GENERATE {user}
+  FEEDBACK: GENERATE {front}
+  STATUS: GENERATE {back} {PUT front}
+-->
+
+<!-- 
+HARDWARE
+USER:NONE {front}
+ID Component: GENERATE{user}
+AREA: GENERATE{user}
+DESCRIPCION: GENERATE{user}
+STATUS:GENERATE {back} {PUT front}
+-->
+
+<!-- 
+ATP
+USER:NONE {front}
+ID Component: GENERATE{user}
+AREA: GENERATE{user}
+DESCRIPCION: GENERATE{user}
+STATUS:GENERATE {back} {PUT front}
+--> 
